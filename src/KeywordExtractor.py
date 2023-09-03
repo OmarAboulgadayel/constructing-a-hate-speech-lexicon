@@ -1,16 +1,16 @@
 import yake
 import csv
 
-csv_file = '.\data\labeled_data.csv'
+csv_file = ".\data\labeled_data.csv"
 
-with open(csv_file, 'r') as file:
+with open(csv_file, "r") as file:
     reader = csv.DictReader(file)
 
     tweets = ""
 
     for row in reader:
-        if row['class'] == '0':
-            tweets += row['tweet'] + ' '
+        if row["class"] == "0":
+            tweets += row["tweet"] + " "
 
 max_ngram_size = 3
 num_of_keywords = 300
